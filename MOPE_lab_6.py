@@ -1,3 +1,4 @@
+import time
 from _pydecimal import Decimal
 from scipy.stats import f, t
 from random import randrange
@@ -225,6 +226,8 @@ print("{:.3f} + {:.3f} * X1 + {:.3f} * X2 + {:.3f} * X3 + {:.3f} * Х1X2 + {:.3f
               student_arr[6], student_arr[7], student_arr[8], student_arr[9], student_arr[10]))
 for i in range(N):
     print()
+    print(f'UTC SEC {time.time()}')
+    print(time.ctime(time.time()))
     print("ŷ{} = {:.3f} ≈ {:.3f}".format((i + 1), check_result(student_arr, i), middle_y[i]))
 
 d = 11 - student_arr.count(0)
